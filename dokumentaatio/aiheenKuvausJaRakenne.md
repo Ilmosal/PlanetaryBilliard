@@ -5,7 +5,6 @@
 **Käyttäjä:** Pelaaja
 - Pelin aloitus
 	- Satunnaisgeneroitu kenttä vai valikko josta valitaan?
-		-> Kentän valinta
 - Pallon tyypin valinta
 - Pallon suunnan valinta
 - Löynnin lujuuden valinta
