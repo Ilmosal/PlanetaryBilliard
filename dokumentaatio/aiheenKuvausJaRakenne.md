@@ -7,4 +7,4 @@
 	- Satunnaisgeneroitu kenttä vai valikko josta valitaan?
 - Pallon tyypin valinta
 - Pallon suunnan valinta
-- Löynnin lujuuden valinta
+- Lyönnin lujuuden valinta
