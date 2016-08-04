@@ -32,7 +32,7 @@ public class Physics {
     
     // Calculate the new position using verlet velocity integration without the
     // half-step: https://en.wikipedia.org/wiki/Verlet_integration
-    private void simulateTimestep (ArrayList<SpaceObject> objects, SpaceObject obj) {
+    private void simulateTimestep(ArrayList<SpaceObject> objects, SpaceObject obj) {
         double totalAcc[] = {0.0, 0.0};
         double addAcc[];
         double newAcc[] = {0.0, 0.0};
@@ -128,9 +128,6 @@ public class Physics {
             double v2t = dotProduct(normVec, obj.getVel());
             
             obj.setVelocity(v2t, v1n);
-            
-        } else if (obj instanceof Sun) {
-            
         }
     }
     

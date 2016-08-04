@@ -4,8 +4,8 @@ public class Sun extends SpaceObject {
     private double mass;
     private int points;
     
-    public Sun(double[] start_p, double[] start_v, double mass) {
-        super(start_p, start_v);
+    public Sun(double[] startP, double[] startV, double mass) {
+        super(startP, startV);
         super.setRadius(2.0);
         this.mass = mass;
         points = 0;

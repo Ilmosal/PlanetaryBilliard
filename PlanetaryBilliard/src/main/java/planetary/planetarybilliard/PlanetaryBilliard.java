@@ -1,6 +1,7 @@
 package planetary.planetarybilliard;
 
-public class main {
+public class PlanetaryBilliard {
+    
     public static void main(String[] args) {
         GameLoop gl = new GameLoop();
         

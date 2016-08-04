@@ -4,8 +4,8 @@ public class Planet extends SpaceObject {
     
     private int pointValue;
     
-    public Planet(double[] start_p, double[] start_v, int pvalue) {
-        super(start_p, start_v);
+    public Planet(double[] startP, double[] startV, int pvalue) {
+        super(startP, startV);
         super.setRadius(1.0);
         this.pointValue = pvalue;
     }

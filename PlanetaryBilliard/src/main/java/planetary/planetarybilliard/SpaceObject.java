@@ -7,21 +7,21 @@ public class SpaceObject {
     private double radius;
     private boolean destroyed;
     
-    public SpaceObject(double[] start_p, double[] start_v) {
-        pos = start_p;
-        vel = start_v;
+    public SpaceObject(double[] startP, double[] startV) {
+        pos = startP;
+        vel = startV;
         
         destroyed = false;
     }
     
-    public void setPos(double newPos_x, double newPos_y) {
-        this.pos[0] = newPos_x;
-        this.pos[1] = newPos_y;
+    public void setPos(double newPosX, double newPosY) {
+        this.pos[0] = newPosX;
+        this.pos[1] = newPosY;
     }
     
-    public void setVelocity(double newVel_x, double newVel_y) {
-        this.vel[0] = newVel_x;
-        this.vel[1] = newVel_y;
+    public void setVelocity(double newVelX, double newVelY) {
+        this.vel[0] = newVelX;
+        this.vel[1] = newVelY;
     } 
 
     public void setRadius(double newRad) {
