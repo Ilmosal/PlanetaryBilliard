@@ -8,3 +8,5 @@
 - Pallon tyypin valinta
 - Pallon suunnan valinta
 - Lyönnin lujuuden valinta
+
+![Luokkakaavio](luokkakaavio.png)
