@@ -1,3 +1,12 @@
+package planetary.spaceobjecttests;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import planetary.spaceobject.Ball;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -5,15 +14,14 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import planetary.planetarybilliard.*;
 
 /**
  *
  * @author cubanfrog
  */
-public class PhysicsTest {
+public class BallTest {
     
-    public PhysicsTest() {
+    public BallTest() {
     }
     
     @BeforeClass
@@ -31,16 +39,17 @@ public class PhysicsTest {
     @After
     public void tearDown() {
     }
-    
-    @Test
-    public void konstruktoriAsettaaVakiotOikein() {
-        Physics phy = new Physics();
-        
-        assertEquals("Gravitational Constant: 1.0, timestep: 0.1", phy.toString());
-    }
 
+    @Test
+    public void konstruktoriAsettaaPallonPisteetOikein() {
+        double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
+        
+        Ball obj = new Ball(pos, vel);
+        
+        assertEquals(50, obj.getPointValue());
+    }
     
-    
+
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

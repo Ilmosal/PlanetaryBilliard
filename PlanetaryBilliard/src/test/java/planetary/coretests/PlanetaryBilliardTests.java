@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package planetary.coretests;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,15 +12,15 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import planetary.planetarybilliard.*;
+import planetary.core.*;
 
 /**
  *
  * @author cubanfrog
  */
-public class PlanetTest {
+public class PlanetaryBilliardTests {
     
-    public PlanetTest() {
+    public PlanetaryBilliardTests() {
     }
     
     @BeforeClass
@@ -38,18 +39,4 @@ public class PlanetTest {
     public void tearDown() {
     }
     
-    @Test
-    public void konstruktoriAsettaaPisteetOikein() {
-        double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
-        
-        Planet obj = new Planet(pos, vel, 100);
-        
-        assertEquals(100, obj.getPointValue());
-    }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

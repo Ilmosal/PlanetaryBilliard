@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package planetary.coretests;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,15 +12,15 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import planetary.planetarybilliard.*;
-
+import planetary.core.*;
+import java.util.ArrayList;
 /**
  *
  * @author cubanfrog
  */
-public class BallTest {
+public class GameLoopTest {
     
-    public BallTest() {
+    public GameLoopTest() {
     }
     
     @BeforeClass
@@ -39,18 +40,19 @@ public class BallTest {
     }
 
     @Test
-    public void konstruktoriAsettaaPallonPisteetOikein() {
-        double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
+    public void konstruktoriToimii() {
+        GameLoop gl = new GameLoop();
         
-        Ball obj = new Ball(pos, vel);
-        
-        assertEquals(50, obj.getPointValue());
+        assertEquals("Gravitational Constant: 1.0, timestep: 0.1", gl.getPhysics().toString());
     }
     
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void runToimii() {
+        GameLoop gl = new GameLoop();
+        
+        gl.run();
+        
+        assertEquals(false, gl.getObjects().isEmpty());
+    } 
+    
 }

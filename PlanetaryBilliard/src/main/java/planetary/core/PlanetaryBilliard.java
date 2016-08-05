@@ -1,4 +1,4 @@
-package planetary.planetarybilliard;
+package planetary.core;
 
 public class PlanetaryBilliard {
     

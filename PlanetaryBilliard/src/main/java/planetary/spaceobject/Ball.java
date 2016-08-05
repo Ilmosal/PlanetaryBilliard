@@ -1,8 +1,8 @@
-package planetary.planetarybilliard;
+package planetary.spaceobject;
 
 public class Ball extends Planet {
     
     public Ball(double[] startP, double[] startV) {
-        super(startP, startV, 50);
+        super("Ball", startP, startV, 50);
     }
 }

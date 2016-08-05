@@ -38,16 +38,14 @@
                 <version>1.1.8</version>
                 <configuration>
                     <targetClasses>
-                        <!--
-                        <param>superohjelma.logiikka.*</param>
-                        <param>superohjelma.tekoaly.*</param>
-                        -->
+                        <param>planetary.physics.*</param>
+                        <param>planetary.spaceobject.*</param>
+                        <param>planetary.core.*</param>
                     </targetClasses>
                     <targetTests>
-                        <!--
-                        <param>superohjelma.logiikka.*</param>
-                        <param>superohjelma.tekoaly.*</param>
-                        -->
+                        <param>planetary.physicstests.*</param>
+                        <param>planetary.spaceobjecttests.*</param>
+                        <param>planetary.coretests.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
