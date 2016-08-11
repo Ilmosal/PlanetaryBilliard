@@ -11,8 +11,8 @@ public class Physics {
     private final double timestep;
     
     public Physics() {
-        this.gravConst = 1.0;
-        this.timestep = 0.0333;
+        this.gravConst = 20.0;
+        this.timestep = 0.01;
     }
     
     //Function for simulating an whole timestep for all objects
@@ -56,7 +56,7 @@ public class Physics {
         }
         
         //Calculate the new position of the object
-        obj.setPos(obj.getPos()[0] + obj.getVel()[0] * timestep + 0.5 * totalAcc[0], obj.getPos()[1] + obj.getVel()[1] * timestep + 0.5 * totalAcc[1]);
+        obj.setPos(obj.getPos()[0] + obj.getVel()[0] * timestep + 0.5 * totalAcc[0] * timestep * timestep, obj.getPos()[1] + obj.getVel()[1] * timestep + 0.5 * totalAcc[1] * timestep * timestep);
         
         //calculate an additional acceleration for calculating the new velocity for the object
         for (SpaceObject sun: objects) {
@@ -182,7 +182,7 @@ public class Physics {
     private void removeDestroyed(ArrayList<SpaceObject> objects) {
         Iterator<SpaceObject> itr = objects.iterator();
         
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             SpaceObject obj = itr.next();
             
             if (obj.isDestroyed()) {
@@ -203,7 +203,7 @@ public class Physics {
     }
 
     public int getTimestepMilliseconds() {
-        return (int) (1000*timestep);
+        return (int) (1000 * timestep);
     }
     
     @Override

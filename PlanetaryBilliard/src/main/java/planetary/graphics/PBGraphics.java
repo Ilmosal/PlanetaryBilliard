@@ -6,19 +6,19 @@ import planetary.spaceobject.SpaceObject;
 
 
 public class PBGraphics extends JFrame {
-    private TestComp game;
+    private PBSurface game;
     
     public PBGraphics(ArrayList<SpaceObject> obj) {
         super();
-        InitUi(obj);
+        initUi(obj);
     }
     
-    private void InitUi(ArrayList<SpaceObject> obj) {
-        game = new TestComp(obj);
+    private void initUi(ArrayList<SpaceObject> obj) {
+        game = new PBSurface(obj);
         add(game);
         
         setTitle("Planetary Billiard");
-        setSize(1200,800);
+        setSize(1200, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setIgnoreRepaint(true);
     }   

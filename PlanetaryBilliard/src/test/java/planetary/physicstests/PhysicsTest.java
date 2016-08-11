@@ -42,7 +42,7 @@ public class PhysicsTest {
     public void konstruktoriAsettaaVakiotOikein() {
         Physics phy = new Physics();
         
-        assertEquals("Gravitational Constant: 1.0, timestep: 0.0333", phy.toString());
+        assertEquals("Gravitational Constant: 20.0, timestep: 0.01", phy.toString());
     }
 
     @Test

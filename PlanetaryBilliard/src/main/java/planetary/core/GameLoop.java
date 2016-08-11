@@ -50,34 +50,24 @@ public class GameLoop implements Runnable {
         });
         
         graphics.setVisible(true);
-/*       
-
-        for (int i = 0; i < 1000; i++) {
-            graphics.updateComponents(objects);
-            phy.simObjects(objects);
-            
-            try {
-                Thread.sleep(33);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(GameLoop.class.getName()).log(Level.SEVERE, null, ex);
-            }
- 
-        }
-*/      
     }
 
     private void initGame() {
         double[] pos = { 60.0, 40.0 }; 
         double[] pos2 = { 80.0, 40.0 };
-        double[] vel = { 2.0, 0.0 };
-        double[] vel2 = { -5.0, 0.0 };
+        double[] pos3 = { 40.0, 40.3 };
+        double[] vel = { 0.0, 0.0 };
+        double[] vel2 = { 0.0, 9.0 };
+        double[] vel3 = { 0.0, 9.0};
 
-        Planet sun = new Planet("sun", pos, vel, 100);
+        Sun sun = new Sun("sun", pos, vel, 100);
 
         Planet pln = new Planet("planet", pos2, vel2, 100);
+        Planet pln2 = new Planet("planet2", pos3, vel3, 100);
 
         objects.add(sun);
         objects.add(pln);
+        objects.add(pln2);
     }
     
     public Physics getPhysics() {
