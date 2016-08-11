@@ -57,6 +57,6 @@ public class SpaceObject {
     
     @Override
     public String toString() {
-        return "Name: " + name + ". Position: " + pos[0] + ", " + pos[1] + ". Velocity: " + vel[0] + ", " + vel[1] + ". Destroyed: "+ destroyed;
+        return "Name: " + name + ". Position: " + pos[0] + ", " + pos[1] + ". Velocity: " + vel[0] + ", " + vel[1] + ". Destroyed: " + destroyed;
     }
 }

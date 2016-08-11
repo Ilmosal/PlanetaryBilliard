@@ -20,3 +20,4 @@ public class Planet extends SpaceObject {
         return this.pointValue;
     }
 }
+    

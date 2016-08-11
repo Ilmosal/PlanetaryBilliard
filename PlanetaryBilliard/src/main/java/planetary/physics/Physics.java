@@ -12,11 +12,12 @@ public class Physics {
     
     public Physics() {
         this.gravConst = 1.0;
-        this.timestep = 0.1;
+        this.timestep = 0.0333;
     }
     
     //Function for simulating an whole timestep for all objects
     public void simObjects(ArrayList<SpaceObject> objects) {
+        
         ArrayList<SpaceObject[]> collisions = new ArrayList<>();
         
         //run Gravity simulation
@@ -61,7 +62,7 @@ public class Physics {
         for (SpaceObject sun: objects) {
             if (sun.getName().contentEquals(obj.getName())) {
                 continue;
-            }
+            }   
 
             //Only do this step for sun objects
             if (sun instanceof Sun) {
@@ -199,6 +200,10 @@ public class Physics {
     
     private double dotProduct(double[] vec1, double[] vec2) {
         return vec1[0] * vec2[0] + vec1[1] * vec2[1];
+    }
+
+    public int getTimestepMilliseconds() {
+        return (int) (1000*timestep);
     }
     
     @Override

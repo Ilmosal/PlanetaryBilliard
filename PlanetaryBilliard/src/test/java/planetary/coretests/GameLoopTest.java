@@ -43,7 +43,7 @@ public class GameLoopTest {
     public void konstruktoriToimii() {
         GameLoop gl = new GameLoop();
         
-        assertEquals("Gravitational Constant: 1.0, timestep: 0.1", gl.getPhysics().toString());
+        assertEquals("Gravitational Constant: 1.0, timestep: 0.0333", gl.getPhysics().toString());
     }
     
     @Test
