@@ -5,6 +5,9 @@ Hei tälle viikolle tuli hauska komplikaatio ku netbeans lopetti yhteistyön eik
 
 ## Dokumentaatio
 [aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
+
 [tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+
 [pit-raportit](dokumentaatio/pit-raportti)
+
 [checkstyle-raportit](dokumentaatio/checkstyle-raportti)
