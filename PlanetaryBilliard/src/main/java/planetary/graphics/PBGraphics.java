@@ -26,4 +26,8 @@ public class PBGraphics extends JFrame {
     public void updateComponents(ArrayList<SpaceObject> objects) {
         game.updateSurface(objects);
     }
+    
+    public PBSurface getGame() {
+        return game;
+    }
 }

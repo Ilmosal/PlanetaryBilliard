@@ -8,7 +8,7 @@ public class Planet extends SpaceObject {
     
     public Planet(String name, double[] startP, double[] startV, int pvalue) {
         super(name, startP, startV);
-        super.setRadius(1.0);
+        super.setRadius(2.0);
         this.pointValue = pvalue;
     }
     

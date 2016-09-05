@@ -66,7 +66,7 @@ public class PlanetTest {
         
         Planet obj = new Planet("asd", pos, vel, 100);
         
-        assertEquals(1.0, obj.getRadius(), 0.001);
+        assertEquals(2.0, obj.getRadius(), 0.001);
     }
 
     // TODO add test methods here.

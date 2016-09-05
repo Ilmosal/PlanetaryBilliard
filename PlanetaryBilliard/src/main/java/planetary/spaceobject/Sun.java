@@ -6,7 +6,7 @@ public class Sun extends SpaceObject {
     
     public Sun(String name, double[] startP, double[] startV, double mass) {
         super(name, startP, startV);
-        super.setRadius(2.0);
+        super.setRadius(4.0);
         this.mass = mass;
         points = 0;
     }
@@ -21,6 +21,10 @@ public class Sun extends SpaceObject {
     
     public void addPoints(double points) {
         this.points += points;
+    }
+    
+    public void removePoints(double points) {
+        this.points -= points;
     }
     
     public int getPoints() {

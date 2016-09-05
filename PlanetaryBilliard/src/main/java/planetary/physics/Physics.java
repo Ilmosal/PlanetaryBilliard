@@ -5,6 +5,7 @@ import planetary.spaceobject.Sun;
 import planetary.spaceobject.SpaceObject;
 import java.util.ArrayList;
 import java.util.Iterator;
+import planetary.spaceobject.Ball;
 
 public class Physics {
     private final double gravConst;
@@ -22,6 +23,14 @@ public class Physics {
         
         //run Gravity simulation
         for (SpaceObject obj: objects) {
+            //Check if the object is the ball and it hasn't been hit yet
+            if (obj instanceof Planet) {
+                if ((Planet) obj instanceof Ball) {
+                    if (((Ball) obj).ballHits() == 0) {
+                        continue;
+                    }
+                }
+            }
             obj = simulateTimestep(objects, obj);    
         }
         
@@ -106,6 +115,24 @@ public class Physics {
     //Method for checking if any collisions have happened during the last simulation
     private void checkForCollisions(ArrayList<SpaceObject> objects, SpaceObject obj, ArrayList<SpaceObject[]> collisions) {
         for (SpaceObject col: objects) {
+            //Check if the object is the ball and it hasn't been hit yet
+            if (col instanceof Planet) {
+                if ((Planet) col instanceof Ball) {
+                    if (((Ball) col).ballHits() == 0) {
+                        continue;
+                    }
+                }
+            }
+            
+            //Check if the object is the ball and it hasn't been hit yet
+            if (obj instanceof Planet) {
+                if ((Planet) obj instanceof Ball) {
+                    if (((Ball) obj).ballHits() == 0) {
+                        continue;
+                    }
+                }
+            }
+            
             if (col.getName().contentEquals(obj.getName())) {
                 continue;
             }
@@ -130,7 +157,6 @@ public class Physics {
     
     private void runCollisions(ArrayList<SpaceObject[]> collisions) {
         for (SpaceObject[] col: collisions) {
-            
             if (col[0] instanceof Sun) {
                 sunCollision((Sun) col[0], col[1]);
             } else if (col[0] instanceof Planet) {
@@ -153,6 +179,7 @@ public class Physics {
         //Resolve the collision of a planet and a ball with a sun only by destroying the object
         } else if (obj instanceof Planet) {
             obj.destroyObject();
+            sun.addPoints(((Planet) obj).getPointValue());
         }
         
         return obj;

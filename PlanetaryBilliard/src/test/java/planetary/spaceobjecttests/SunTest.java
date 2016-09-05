@@ -69,7 +69,7 @@ public class SunTest {
         
         Sun obj = new Sun("asd", pos, vel, 1.0);
         
-        assertEquals(2.0, obj.getRadius(), 0.001);
+        assertEquals(4.0, obj.getRadius(), 0.001);
     }
     
     @Test 
