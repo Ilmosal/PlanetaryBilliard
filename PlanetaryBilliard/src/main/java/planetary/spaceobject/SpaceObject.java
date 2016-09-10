@@ -1,6 +1,10 @@
 package planetary.spaceobject;
 
-public class SpaceObject {
+/**
+ * Abstrakti objekti, joka toteuttaa kaikki tilan objektit.
+ * @author ilmo
+ */
+public abstract class SpaceObject {
     private final String name;
     
     private double[] pos;
@@ -9,6 +13,12 @@ public class SpaceObject {
     private double radius;
     private boolean destroyed;
     
+    /**
+     * Konstruktori avaruuden objekteille.
+     * @param name joku uniikki nimi SpaceObjektille
+     * @param startP Aloituspaikka objektille
+     * @param startV Aloitusnopeus objektille
+     */
     public SpaceObject(String name, double[] startP, double[] startV) {
         pos = startP;
         vel = startV;
@@ -17,11 +27,21 @@ public class SpaceObject {
         destroyed = false;
     }
     
+    /**
+     * Setteri positiolle.
+     * @param newPosX uusi x-positio
+     * @param newPosY uusi y-positio
+     */
     public void setPos(double newPosX, double newPosY) {
         this.pos[0] = newPosX;
         this.pos[1] = newPosY;
     }
     
+    /**
+     * Setteri nopeudelle.
+     * @param newVelX uusi x-nopeus
+     * @param newVelY uusi y-nopeus
+     */
     public void setVel(double newVelX, double newVelY) {
         this.vel[0] = newVelX;
         this.vel[1] = newVelY;
@@ -51,6 +71,9 @@ public class SpaceObject {
         return this.destroyed;
     }
     
+    /**
+     * metodi, joka tuhoaa objektin.
+     */
     public void destroyObject() {
         this.destroyed = true;
     }

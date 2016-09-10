@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import planetary.spaceobject.Planet;
 
 /**
  *
@@ -43,7 +44,7 @@ public class SpaceObjectTest {
     public void konstruktoriAsettaaPaikanOikein() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 7);
         
         assertArrayEquals(pos, obj.getPos(), 0.001);
     }
@@ -52,7 +53,7 @@ public class SpaceObjectTest {
     public void konstruktoriAsettaaNopeudenOikein() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 0);
         
         assertArrayEquals(pos, obj.getVel(), 0.001);
     }
@@ -61,7 +62,7 @@ public class SpaceObjectTest {
     public void konstruktoriAsettaaDestroynOikein() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 0);
         
         assertEquals(false, obj.isDestroyed());
     }
@@ -70,7 +71,7 @@ public class SpaceObjectTest {
     public void destroytuhoaaSpaceObjectin() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 0);
         
         obj.destroyObject();
         
@@ -81,7 +82,7 @@ public class SpaceObjectTest {
     public void setPosToimii() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0}; double[] cmp = {2.0, 4.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 0);
         
         obj.setPos(2.0, 4.0);
         
@@ -92,7 +93,7 @@ public class SpaceObjectTest {
     public void setVelToimii() {
         double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0}; double[] cmp = {3.0, -4.0};
         
-        SpaceObject obj = new SpaceObject("asd", pos, vel);
+        Planet obj = new Planet("asd", pos, vel, 0);
         
         obj.setVel(3.0, -4.0);
         

@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+:q<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 <module name='Checker'>
 
-    <module name='TreeWalker'>
+    <!-- asetetaan kieliasetukset englanniksi. -->
+    <property name="localeCountry" value="EN"/>
+    <property name="localeLanguage" value="en"/>
 
+    <module name='TreeWalker'>
+	<module name="JavadocMethod">
+    		<property name="scope" value="public"/>
+    		<property name="allowMissingParamTags" value="false"/>
+    		<property name="allowMissingPropertyJavadoc" value="true"/>
+    		<property name="allowMissingThrowsTags" value="false"/>
+    		<property name="allowMissingReturnTag" value="false"/>
+   		<property name="allowThrowsTagsForSubclasses" value="true"/>
+  	</module>
+
+  	<module name="JavadocStyle">
+  		<property name="scope" value="public"/>
+ 		<property name="checkEmptyJavadoc" value="true"/>
+ 	</module>
         <property name='tabWidth' value='4' />
 
-          <!-- Paljon moduuleja välissä -->
-
-        <module name="JavadocMethod">
-            <property name="scope" value="public"/>
-            <property name="allowMissingParamTags" value="false"/>
-            <property name="allowMissingPropertyJavadoc" value="true"/>
-            <property name="allowMissingThrowsTags" value="false"/>
-            <property name="allowMissingReturnTag" value="false"/>
-            <property name="allowThrowsTagsForSubclasses" value="true"/>
-        </module>
-
-        <module name="JavadocStyle">
-            <property name="scope" value="public"/>
-            <property name="checkEmptyJavadoc" value="true"/>
-          </module>
-          
-          <!-- Block Checks -->
+        <!-- Block Checks -->
 
         <module name='EmptyBlock' />
         <module name='LeftCurly' />
@@ -88,12 +88,12 @@
 
     <!-- File Length -->
 
-    <module name="SuppressionFilter">
-        <property name="file" value="mysuppressions.xml" />
-    </module>
-
     <module name='FileLength'>
         <property name='max' value='200' />
     </module>
 
 </module>
+    <module name="SuppressionFilter">
+        <property name="file" value="mysuppressions.xml" />
+    </module>
+

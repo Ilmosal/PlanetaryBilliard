@@ -7,15 +7,27 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import planetary.spaceobject.Ball;
 
+/**
+ * Luokka joka suorittaa kaikki pelin fysiikkasimulaatiot.
+ * @author ilmo
+ */
 public class Physics {
     private final double gravConst;
     private final double timestep;
     
+    /**
+     * Konstruktori fysiikkamoottoria varten. Alustaa vakiot.
+     */
     public Physics() {
         this.gravConst = 20.0;
         this.timestep = 0.01;
     }
     
+    /**
+     * Metodi, joka simuloi yhden aika-askeleen listalle SpaceObject olioita.
+     *
+     * @param objects lista pelin fysiikkaolioista. 
+     */
     //Function for simulating an whole timestep for all objects
     public void simObjects(ArrayList<SpaceObject> objects) {
         
@@ -26,7 +38,7 @@ public class Physics {
             //Check if the object is the ball and it hasn't been hit yet
             if (obj instanceof Planet) {
                 if ((Planet) obj instanceof Ball) {
-                    if (((Ball) obj).ballHits() == 0) {
+                    if (((Ball) obj).getBallHits() == 0) {
                         continue;
                     }
                 }
@@ -118,7 +130,7 @@ public class Physics {
             //Check if the object is the ball and it hasn't been hit yet
             if (col instanceof Planet) {
                 if ((Planet) col instanceof Ball) {
-                    if (((Ball) col).ballHits() == 0) {
+                    if (((Ball) col).getBallHits() == 0) {
                         continue;
                     }
                 }
@@ -127,7 +139,7 @@ public class Physics {
             //Check if the object is the ball and it hasn't been hit yet
             if (obj instanceof Planet) {
                 if ((Planet) obj instanceof Ball) {
-                    if (((Ball) obj).ballHits() == 0) {
+                    if (((Ball) obj).getBallHits() == 0) {
                         continue;
                     }
                 }
@@ -228,7 +240,7 @@ public class Physics {
     private double dotProduct(double[] vec1, double[] vec2) {
         return vec1[0] * vec2[0] + vec1[1] * vec2[1];
     }
-
+ 
     public int getTimestepMilliseconds() {
         return (int) (1000 * timestep);
     }

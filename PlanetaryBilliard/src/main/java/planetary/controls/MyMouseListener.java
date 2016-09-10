@@ -8,13 +8,21 @@ import planetary.spaceobject.Planet;
 import planetary.spaceobject.SpaceObject;
 import planetary.spaceobject.Sun;
 
+/**
+ * Luokka hiiren näppäysten ja liikkeiden lukemiselle.
+ * @author ilmo
+ */
 public class MyMouseListener implements MouseListener {
     private ArrayList<SpaceObject> objects;
     private boolean hasBallBeenPLayed;
     
+    /**
+     * Konstruktori hiirten näppäysten lukijalle.
+     * @param objects lista SpaceObject olioita.
+     */
     public MyMouseListener(ArrayList<SpaceObject> objects) {
-       this.objects = objects;
-       hasBallBeenPLayed = false;
+        this.objects = objects;
+        this.hasBallBeenPLayed = false;
     }
     
     @Override

@@ -11,6 +11,10 @@ import planetary.controls.MyKeyboardListener;
 import planetary.controls.MyMouseListener;
 import planetary.spaceobject.*;
 
+/**
+ * JPanel luokan toteuttava olio joka pyörittää kaiken grafiikkaan liittyvän koodissa.
+ * @author ilmo
+ */
 public class PBSurface extends JPanel {
     private ArrayList<SpaceObject> objects;
     private BufferedImage img;
@@ -18,7 +22,11 @@ public class PBSurface extends JPanel {
     private BufferedImage planet;
     private MyMouseListener myMouse;
     private MyKeyboardListener myKeyboard;
-    
+   
+    /**
+     * Konstruktori PBSurfacelle.
+     * @param objects lista SpaceObject olioita
+     */
     public PBSurface(ArrayList<SpaceObject> objects)  {
         super();
         try {
@@ -77,7 +85,7 @@ public class PBSurface extends JPanel {
                                (int) (obj.getPos()[1] * 10) - (int) (obj.getRadius() * 10), null);
         } else {
             if ((Planet) obj instanceof Ball) {
-                if (((Ball) obj).ballHits() == 0) {
+                if (((Ball) obj).getBallHits() == 0) {
                     g2D.setColor(new Color(255, 255, 255, 127));
                 } else {
                     g2D.setColor(new Color(255, 255, 255, 255));
@@ -95,6 +103,10 @@ public class PBSurface extends JPanel {
         }
     }
     
+    /**
+     * Luokan metodi jolla päivitetään ruutua.
+     * @param objects 
+     */
     public void updateSurface(ArrayList<SpaceObject> objects) {
         this.objects = objects;
         this.repaint();
