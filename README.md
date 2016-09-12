@@ -1,8 +1,6 @@
 # PlanetaryBilliard
 Ohjelmointiprojekti "Ohjelmoinnin Harjoitustyö"-kurssille. 
 
-Hei tälle viikolle tuli hauska komplikaatio ku netbeans lopetti yhteistyön eikä suostu avamaan projektitiedostoa. En usko että saan tähän deadlineen asioita korjattua, mutta tulen ensi pajaan fiksaamaan asiaa.
-
 ## Dokumentaatio
 [aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
 
@@ -11,3 +9,7 @@ Hei tälle viikolle tuli hauska komplikaatio ku netbeans lopetti yhteistyön eik
 [pit-raportit](dokumentaatio/pit-raportti)
 
 [checkstyle-raportit](dokumentaatio/checkstyle-raportti)
+
+[rakenteen kuvaus](dokumentaatio/rakenteenkuvaus.md)
+
+[käyttö-ohjeet](dokumentaatio/käyttöohje.md)
