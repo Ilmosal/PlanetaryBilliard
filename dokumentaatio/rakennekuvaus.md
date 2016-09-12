@@ -1,0 +1,2 @@
+#Rakennekuvaus
+Ohjelmaa pöyrittää GameLoop-olio, jonka sisällä kaikki muut oliot pyörivät. Simulaation ohjelmalogiikkaa pyörittää Physics-olio, sen graafista käyttöliittymää PBGraphics-olio ja sen user inputtia MyKeyboardListener, sekä MyMouseListener. Ympäriohjelmaa liikku abstraktin luokan SpaceObject toteuttavia olioita, Sun, Planet ja Ball(joka oikeastaan toteuttaa luokan Planet). PBGraphics ohjaa PBSurface-oliota, jossa kaikki grafiikkalaskut oikeasti tapahtuvat.

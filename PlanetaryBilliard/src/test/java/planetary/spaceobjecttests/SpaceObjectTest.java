@@ -99,4 +99,13 @@ public class SpaceObjectTest {
         
         assertArrayEquals(cmp, obj.getVel(), 0.001);
     }
+    
+    @Test
+    public void toStringToimii() {
+        double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
+        
+        Planet obj = new Planet("asd", pos, vel, 0);
+        
+        assertEquals("Name: asd. Position: 0.0, 0.0. Velocity: 0.0, 0.0. Destroyed: false", obj.toString());
+    }
 }

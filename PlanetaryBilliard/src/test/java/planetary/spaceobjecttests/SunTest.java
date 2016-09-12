@@ -83,4 +83,14 @@ public class SunTest {
         assertEquals(3.0, obj.getMass(), 0.001);
     }
     
+    @Test
+    public void removePointsToimii() {
+        double[] pos = {0.0, 0.0}; double[] vel = {0.0, 0.0};
+        
+        Sun obj = new Sun("asd", pos, vel, 1.0);
+        
+        obj.removePoints(10);
+        
+        assertEquals(-10, obj.getPoints());
+    }
 }
