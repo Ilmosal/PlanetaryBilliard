@@ -12,4 +12,4 @@ Ohjelmointiprojekti "Ohjelmoinnin Harjoitustyö"-kurssille.
 
 [rakenteen kuvaus](dokumentaatio/rakenteenkuvaus.md)
 
-[käyttö-ohjeet](dokumentaatio/käyttöohje.md)
+[käyttöohjeet](dokumentaatio/käyttöohje.md)
